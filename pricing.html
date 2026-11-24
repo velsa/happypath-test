@@ -1,12 +1,12 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pricing · Happy Path test shop</title></head>
 <body style="font-family:system-ui;max-width:40rem;margin:2rem auto;padding:0 1rem">
 <h1>Pricing</h1>
-<p>Planted bugs for the Happy Path path walk: the Yearly button does nothing, and this price disagrees with the home page.</p>
+<p>Planted bugs for the Happy Path path walk: the Yearly button did nothing (fixed), and this price disagrees with the home page.</p>
 <div role="tablist"><button role="tab" id="m" aria-selected="true">Monthly</button> <button role="tab" id="y">Yearly</button></div>
 <h2>Pro</h2><p id="price">$15 / month</p>
 <p><a href="./">Home</a></p>
 <script>
 // Planted bug: the handler is attached to an id that does not exist, so "Yearly" never shows the yearly price.
-document.getElementById('yy')?.addEventListener('click',()=>{document.getElementById('price').textContent='$120 / year';});
+document.getElementById('y')?.addEventListener('click',()=>{document.getElementById('price').textContent='$120 / year';});
 </script>
 </body></html>
